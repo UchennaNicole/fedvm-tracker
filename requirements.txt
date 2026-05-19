@@ -1,0 +1,13 @@
+# FedVM-Tracker — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core data processing
+openpyxl>=3.1.2        # Excel POA&M generation (read/write .xlsx)
+
+# Standard library modules used (no install required):
+#   csv, json, hashlib, logging, pathlib, datetime,
+#   urllib.request, collections, argparse, typing
+
+# Optional / dev dependencies
+# pytest>=7.4.0         # Unit testing
+# pytest-cov>=4.1.0     # Coverage reporting

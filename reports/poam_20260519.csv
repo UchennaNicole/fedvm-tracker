@@ -1,0 +1,60 @@
+Weakness ID,System Name,Weakness Name,Weakness Description,CVE,CVSS Score,Risk Rating,Remediation Tier,SLA (Days),Affected Host(s),Port / Protocol,NIST 800-53 Control(s),Point of Contact,Organization,Date Identified,Scheduled Completion Date,Milestone,Status,Days Open,Overdue,Delay Reason,KEV Match,Exploit Available,Asset Tier,Risk Priority Score,Recommended Solution,References
+FY2026-C-0001,DOT-OCIO-PROD,MS17-010 EternalBlue SMB RCE,Remote code execution vulnerability in SMBv1,CVE-2024-1234,9.8,High,P2,30,10.0.0.15,445 / tcp,"SI-2, CM-7, SC-7",System Owner,Department of Transportation,2026-05-19,2026-06-03,"1. Validate and triage findings — Day 5
+2. Assign to system owner — Day 7
+3. Schedule patch in change management — Day 14
+4. Apply patch — Day 25
+5. Re-scan and close — 2026-06-03",Open,0,NO,,NO,YES,unknown,64.3,Apply Microsoft patch MS17-010 immediately. Disable SMBv1 if not required.,https://docs.microsoft.com/en-us/security-updates/securitybulletins/2017/ms17-010
+FY2026-C-0002,DOT-OCIO-PROD,Apache Tomcat AJP File Inclusion (Ghostcat),AJP connector exposes internal files,CVE-2024-8901,9.1,High,P2,30,10.0.0.88,8080 / tcp,"SI-2, CM-7",System Owner,Department of Transportation,2026-05-19,2026-06-03,"1. Validate and triage findings — Day 5
+2. Assign to system owner — Day 7
+3. Schedule patch in change management — Day 14
+4. Apply patch — Day 25
+5. Re-scan and close — 2026-06-03",Open,0,NO,,NO,YES,unknown,61.8,"Upgrade to Tomcat 9.0.31, 8.5.51, or 7.0.100. Disable AJP connector if not needed.",https://tomcat.apache.org/security-9.html
+FY2026-H-0003,DOT-OCIO-PROD,RDP BlueKeep Vulnerability,Remote Desktop Services RCE,CVE-2024-5678,8.8,Moderate,P3,90,10.0.0.22,3389 / tcp,"AC-17, SI-2, CM-7",System Owner,Department of Transportation,2026-05-19,2026-06-18,"1. Validate findings — Week 1
+2. Assign to system owner — Week 2
+3. Remediation scheduled — Week 6
+4. Patch applied — Week 10
+5. Close POA&M — 2026-06-18",Open,0,NO,,NO,NO,unknown,45.8,Apply Windows security update KB4499175.,https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0708
+FY2026-H-0004,DOT-OCIO-PROD,Windows Print Spooler RCE (PrintNightmare),Print spooler service allows privilege escalation,CVE-2024-4455,8.1,Moderate,P3,90,10.0.0.22,445 / tcp,"SI-2, CM-7, AC-6",System Owner,Department of Transportation,2026-05-19,2026-06-18,"1. Validate findings — Week 1
+2. Assign to system owner — Week 2
+3. Remediation scheduled — Week 6
+4. Patch applied — Week 10
+5. Close POA&M — 2026-06-18",Open,0,NO,,NO,NO,unknown,43.3,Apply KB5005010. Disable Print Spooler on systems that do not require it.,https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527
+FY2026-H-0005,DOT-OCIO-PROD,Apache Log4j RCE (Log4Shell),JNDI injection vulnerability in Apache Log4j,CVE-2024-9101,7.5,Moderate,P3,90,10.0.0.33,443 / tcp,"SI-2, SI-10",System Owner,Department of Transportation,2026-05-19,2026-06-18,"1. Validate findings — Week 1
+2. Assign to system owner — Week 2
+3. Remediation scheduled — Week 6
+4. Patch applied — Week 10
+5. Close POA&M — 2026-06-18",Open,0,NO,,NO,NO,unknown,41.2,Upgrade to Log4j 2.17.1 or later. Apply vendor patches.,https://logging.apache.org/log4j/2.x/security.html
+FY2026-H-0006,DOT-OCIO-PROD,MySQL Unpatched Version,MySQL server running outdated version with known vulnerabilities,CVE-2024-2233,7.2,Moderate,P3,90,10.0.0.15,3306 / tcp,"SI-2, SI-2(2)",System Owner,Department of Transportation,2026-05-19,2026-06-18,"1. Validate findings — Week 1
+2. Assign to system owner — Week 2
+3. Remediation scheduled — Week 6
+4. Patch applied — Week 10
+5. Close POA&M — 2026-06-18",Open,0,NO,,NO,NO,unknown,40.2,Upgrade MySQL to the latest stable release.,https://dev.mysql.com/doc/relnotes/mysql/8.0/en/
+FY2026-M-0007,DOT-OCIO-PROD,SSL/TLS Weak Cipher Suites,Server supports weak cryptographic algorithms,CVE-2024-5566,6.8,Moderate,P3,90,10.0.0.33,443 / tcp,"SC-8, SC-28, SI-2",System Owner,Department of Transportation,2026-05-19,2026-08-17,"1. Validate findings — Week 1
+2. Assign to system owner — Week 2
+3. Remediation scheduled — Week 6
+4. Patch applied — Week 10
+5. Close POA&M — 2026-08-17",Open,0,NO,,NO,NO,unknown,38.8,Reconfigure the SSL/TLS service to disable weak cipher suites. Enforce TLS 1.2 or higher.,https://tools.ietf.org/html/rfc7525
+FY2026-M-0008,DOT-OCIO-PROD,Apache HTTP Server mod_status Information Disclosure,Sensitive information exposed via server-status page,CVE-2024-1122,6.5,Moderate,P3,90,10.0.0.44,80 / tcp,"SI-2, CM-7",System Owner,Department of Transportation,2026-05-19,2026-08-17,"1. Validate findings — Week 1
+2. Assign to system owner — Week 2
+3. Remediation scheduled — Week 6
+4. Patch applied — Week 10
+5. Close POA&M — 2026-08-17",Open,0,NO,,NO,NO,unknown,37.8,Restrict access to /server-status to trusted hosts only. Disable mod_status if not required.,https://httpd.apache.org/docs/current/mod/mod_status.html
+FY2026-M-0009,DOT-OCIO-PROD,OpenSSH Username Enumeration,SSH user enumeration via timing attack,CVE-2024-3344,5.3,Moderate,P3,90,10.0.0.55,22 / tcp,"IA-5, AC-7",System Owner,Department of Transportation,2026-05-19,2026-08-17,"1. Validate findings — Week 1
+2. Assign to system owner — Week 2
+3. Remediation scheduled — Week 6
+4. Patch applied — Week 10
+5. Close POA&M — 2026-08-17",Open,0,NO,,NO,NO,unknown,33.5,Upgrade OpenSSH to 7.8 or later.,https://www.openssh.com/txt/release-7.8
+FY2026-M-0010,DOT-OCIO-PROD,TLS/SSL Certificate Expired,SSL certificate has expired,CVE-2024-6677,4.3,Moderate,P3,90,10.0.0.66,443 / tcp,"SC-8, SC-28, SI-2",System Owner,Department of Transportation,2026-05-19,2026-08-17,"1. Validate findings — Week 1
+2. Assign to system owner — Week 2
+3. Remediation scheduled — Week 6
+4. Patch applied — Week 10
+5. Close POA&M — 2026-08-17",Open,0,NO,,NO,NO,unknown,30.0,Renew the SSL certificate immediately.,https://tools.ietf.org/html/rfc5280
+FY2026-L-0011,DOT-OCIO-PROD,SNMP Default Community String,SNMP service using default community strings,CVE-2024-7890,3.7,Moderate,P3,90,10.0.0.77,161 / tcp,"CM-7, IA-3",System Owner,Department of Transportation,2026-05-19,2026-11-15,"1. Validate findings — Week 1
+2. Assign to system owner — Week 2
+3. Remediation scheduled — Week 6
+4. Patch applied — Week 10
+5. Close POA&M — 2026-11-15",Open,0,NO,,NO,NO,unknown,27.9,Disable SNMP or change community strings to complex values. Use SNMPv3 with authentication.,https://tools.ietf.org/html/rfc3414
+FY2026-L-0012,DOT-OCIO-PROD,Telnet Service Detected,Unencrypted remote access protocol detected,N/A,2.1,Low,P4,180,10.0.0.99,23 / tcp,"CM-7, SC-8, AC-17",System Owner,Department of Transportation,2026-05-19,2026-11-15,"1. Document accepted risk or remediation path — Month 1
+2. Schedule remediation — Month 3
+3. Apply fix — Month 5
+4. Close POA&M — 2026-11-15",Open,0,NO,,NO,NO,unknown,22.4,Disable Telnet. Use SSH for encrypted remote access.,https://tools.ietf.org/html/rfc854
